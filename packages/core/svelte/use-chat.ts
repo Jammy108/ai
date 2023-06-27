@@ -227,8 +227,9 @@ export function useChat({
     }
   }
 
-  const setMessages = (messages: Message[]) => {
-    mutate(messages)
+  const setMessages = (newMessages: Message[]) => {
+    mutate(newMessages);
+    messages.set(newMessages);
   }
 
   const input = writable(initialInput)

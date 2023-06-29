@@ -655,6 +655,7 @@ function useChat({
   };
   const setMessages = (messages2) => {
     mutate(messages2);
+    messages.set(messages2);
   };
   const input = (0, import_store.writable)(initialInput);
   const handleSubmit = (e) => {
